@@ -13,4 +13,13 @@ export default class RaceService {
   getRacers() {
     return JSON.parse(JSON.stringify(_racers))
   }
+  getBalance() {
+    return _user.accountBalance
+  }
+  bet(index) {
+    if (_user.accountBalance >= 10 && _racers[index]) {
+      _racers[index].bet += 10
+      _user.accountBalance -= 10
+    }
+  }
 }

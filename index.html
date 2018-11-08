@@ -12,15 +12,31 @@
 </head>
 
 <body>
-  <form onsubmit="app.controllers.raceController.addFrog(event)">
-    <input type="text" name="name" required>
-    <input type="text" name="img" required>
-
-    <button type="submit">Add frog</button>
-  </form>
-  <div id="frog">
-
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-right">
+        <p>Account Balance:<span id="balance">...</span></p>
+      </div>
+      <div class="col-6 flex align-items-center justify-content-center">
+        <form onsubmit="app.controllers.raceController.addFrog(event)">
+          <div class="form-group">
+            <label for="name">Frog Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+            <label for="img">Frog Image</label>
+            <input type="text" id="img" class="form-control" name="img" placeholder="image" required>
+          </div>
+          <button class="btn btn-info" type="submit">Add frog</button>
+        </form>
+      </div>
+      <div class="col-6 flex align-items-center justify-content-center">
+        <div>
+          <button class="btn btn-success">RACE!</button>
+        </div>
+      </div>
+    </div>
+    <div id="frog" class="row"></div>
   </div>
+
 
 
   <script src="app/main.js" type="module"></script>
