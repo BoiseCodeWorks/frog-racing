@@ -1,7 +1,8 @@
 export default class Frog {
-  constructor(name, img) {
+  constructor(data) {
     console.log("frog working")
-    this.name = name
-    this.img = img
+    this.name = data.name
+    this.img = data.img
+    this.bet = 0
   }
 }
